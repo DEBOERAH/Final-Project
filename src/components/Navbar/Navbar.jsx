@@ -2,6 +2,7 @@ import {useState} from 'react';
 import {IoMdSearch} from "react-icons/io";
 import {RxHamburgerMenu} from "react-icons/rx";
 import {FaCartShopping} from "react-icons/fa6";
+import DropDown from './DropDown';
 
 const MenuLinks = [
     {id: 1, name: "Home", link: "/#"},
@@ -72,6 +73,10 @@ const Navbar = () => {
                         >
                             <RxHamburgerMenu/>
                         </button>
+
+                        <div>
+                            <DropDown/>
+                        </div>
 
                     </div>
                 </div>
