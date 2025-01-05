@@ -1,8 +1,15 @@
-import React, { useState, useEffect, useRef } from 'react';
+import  { useState, useEffect, useRef } from 'react';
+import { useNavigate } from "react-router-dom";
 
 const DropDown = () => {
     const [isOpen, setIsOpen] = useState(false);
     const dropdownRef = useRef(null);
+    const navigate = useNavigate();
+
+    const goToLogin = () => {
+        navigate('/login');
+    };
+
 
     const toggleDropdown = () => {
         setIsOpen(!isOpen);
@@ -57,16 +64,17 @@ const DropDown = () => {
 
 
 
-                        <form method="POST" action="#" role="none">
+
                             <button
                                 type="submit"
                                 style={{ backgroundColor: '#F52F37', color: '#fff' }}
                                 className="block w-full px-4 py-2 text-left text-sm"
                                 role="menuitem"
+                                onClick={goToLogin}
                             >
                             Log into your Account
                             </button>
-                        </form>
+
                     </div>
                 </div>
             )}

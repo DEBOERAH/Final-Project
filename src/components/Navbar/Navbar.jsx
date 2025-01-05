@@ -2,7 +2,8 @@ import {useState} from 'react';
 import {IoMdSearch} from "react-icons/io";
 import {RxHamburgerMenu} from "react-icons/rx";
 import {FaCartShopping} from "react-icons/fa6";
-import DropDown from './DropDown';
+import {MdOutlinePerson} from "react-icons/md";
+import { useNavigate } from "react-router-dom";
 
 const MenuLinks = [
     {id: 1, name: "Home", link: "/#"},
@@ -16,6 +17,10 @@ const Navbar = () => {
 
     const toggleDrawer = () => {
         setIsDrawerOpen(!isDrawerOpen);
+    };
+    const navigate = useNavigate();
+    const goToLogin = () => {
+        navigate('/login');
     };
 
     return (
@@ -51,7 +56,7 @@ const Navbar = () => {
 
                     </div>
                     {/*Search Bar & Cart Icon*/}
-                    <div className="flex items-center gap-4">
+                    <div className="flex items-center gap-2">
                         {/*Search Bar*/}
                         <div className="relative group sm:block">
                             <input type="text" placeholder="Search" className="search-bar"/>
@@ -61,12 +66,16 @@ const Navbar = () => {
                         {/*Cart Icon*/}
                         <button className="relative p-3">
                             <FaCartShopping className="text-xl text-gray-600"/>
-                            <div className="w-4 h-4 bg-red-500 text-white rounded-full absolute top-0 right-0 flex items-center justify-center text-x5">
+                            <div
+                                className="w-4 h-4 bg-red-500 text-white rounded-full absolute top-0 right-0 flex items-center justify-center text-x5">
                                 4
                             </div>
                         </button>
                         <div></div>
                         {/* Hamburger Menu (visible on small screens) */}
+                        <button onClick={goToLogin}>
+                            <MdOutlinePerson className="text-3xl text-gray-600" />
+                        </button>
                         <button
                             className="lg:hidden text-2xl focus:outline-none"
                             onClick={toggleDrawer}
@@ -74,9 +83,6 @@ const Navbar = () => {
                             <RxHamburgerMenu/>
                         </button>
 
-                        <div>
-                            <DropDown/>
-                        </div>
 
                     </div>
                 </div>
