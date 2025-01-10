@@ -1,6 +1,5 @@
 import Hero from "../components/Hero/Hero.jsx";
 import SubHero from "../components/subHero/SubHero.jsx";
-import Footer from "../components/Footer/Footer.jsx";
 import Products from "../components/Products/Products.jsx";
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -22,7 +21,6 @@ const Home = () => {
             <Hero/>
             <SubHero />
             <Products/>
-            <Footer />
 
         </div>
     )

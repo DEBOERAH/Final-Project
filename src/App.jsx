@@ -6,12 +6,13 @@ import Frozenfood from "./components/FrozenFood/Frozenfood.jsx";
 import Kerosene from "./components/Kerosene/Kerosene.jsx";
 import Shop from "./pages/Shop.jsx";
 import Navbar from "./components/Navbar/Navbar.jsx";
+import Footer from "./components/Footer/Footer.jsx";
 
 
 export default function App() {
     return (<main>
             <Router>
-            <Navbar/>
+                <Navbar/>
                 <Routes>
                     <Route index element={<Home/>}/>
                     <Route path="/home" element={<Home/>}/>
@@ -20,8 +21,8 @@ export default function App() {
                     <Route path="/Drinks" element={<Drinks/>}/>
                     <Route path="/FrozenFood" element={<Frozenfood/>}/>
                     <Route path="/Kerosene" element={<Kerosene/>}/>
-
                 </Routes>
+                <Footer/>
             </Router>
         </main>
 
