@@ -1,4 +1,3 @@
-
 import Image1 from "/src/assets/Images/Iya afam1.jpg";
 import Image2 from "/src/assets/Images/Iya afam 6.jpeg";
 import Image3 from "/src/assets/Images/Iya afam7.jpeg";
@@ -9,19 +8,19 @@ const ImageList = [
         id: 1,
         img: Image2,
         title: "Up to 30% off on all Frozen foods",
-        description : "Best quality frozen foods you can get with ensured freshness like they were freshly caught"
+        description: "Best quality frozen foods you can get with ensured freshness like they were freshly caught"
     },
     {
         id: 1,
         img: Image1,
         title: "Up to 40% off on all Soft drinks",
-        description : "Get your favourite consumed soft drinks at wholesale or retail for the best prices in town..."
+        description: "Get your favourite consumed soft drinks at wholesale or retail for the best prices in town..."
     },
     {
         id: 1,
         img: Image3,
         title: "Upto 30% off on all Frozen foods",
-        description : "Best quality frozen foods you can get with ensured freshness like they were freshly caught"
+        description: "Best quality frozen foods you can get with ensured freshness like they were freshly caught"
     }
 ];
 
@@ -35,16 +34,17 @@ const Hero = () => {
         slidesToScroll: 1,
         autoplay: true,
         autoplaySpeed: 4000,
-        cssEase : "ease-in-out",
+        cssEase: "ease-in-out",
         pauseOnHover: false,
         pauseOnFocus: true
 
     };
 
     return (
-        <div className="relative overflow-hidden min-h-[550px] sm:min-h-[650px] bg-gray-100 flex justify-center items-center">
+        <div
+            className="relative overflow-hidden min-h-[550px] sm:min-h-[650px] bg-gray-100 flex justify-center items-center">
             {/*background pattern*/}
-            <div className= "h-[700px] w-[700px] bg-primary/40 absolute -top-1/2 right-0 rounded-3xl rotate-45 -z-9">
+            <div className="h-[700px] w-[700px] bg-primary/40 absolute -top-1/2 right-0 rounded-3xl rotate-45 -z-9">
 
             </div>
             {/*hero section*/}
@@ -69,7 +69,7 @@ const Hero = () => {
                                 <div className="order-1 sm:order-2">
                                     <div className="relative z-10">
                                         <img src={data.img} alt=""
-                                             className="w-[300px] h-[300px] sm:h-[450px] sm:w-450px sm:scale-105 lg:scale-120 object-contain mx-auto"/>
+                                             className="w-[300px] h-[300px] sm:h-[450px] sm:w-450px sm:scale-105 lg:scale-120 lg:object-cover sm:object-cover md:object-cover rounded-full mx-auto "/>
                                     </div>
                                 </div>
                             </div>

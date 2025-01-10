@@ -6,8 +6,8 @@ import {MdOutlinePerson} from "react-icons/md";
 import { useNavigate } from "react-router-dom";
 
 const MenuLinks = [
-    {id: 1, name: "Home", link: "/#"},
-    {id: 2, name: "Shop", link: "/#"},
+    {id: 1, name: "Home", link: "/home"},
+    {id: 2, name: "Shop", link: "/shop"},
     {id: 3, name: "About us", link: "/#"},
     {id: 4, name: "Contact us", link: "/#"},
 ];
@@ -23,15 +23,16 @@ const Navbar = () => {
         navigate('/login');
     };
 
+
     return (
-        <div className="bg-white duration-200 relative z-40">
+        <div className="bg-white duration-200 sticky top-0 z-50">
             <div className="py-4">
                 <div className="container mx-auto px-2 flex justify-between items-center ">
                     {/* Logo and Navbar */}
                     <div className="flex items-center justify-between lg:justify-start lg:gap-4">
                         {/* Logo */}
                         <a
-                            href="#"
+                            href="/home"
                             className="text-primary font-semibold tracking-widest text-2xl uppercase sm:text-1xl"
                         >
                             IyaAfam
